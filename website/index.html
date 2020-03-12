@@ -17,28 +17,39 @@
     <meta name="theme-color" content="#ffffff">
     <style type="text/css">
      hr {
-       margin: 30px 0;
-       border-color: #bbb;
+         margin: 30px 0;
+         border-color: #bbb;
      }
      .text-link {
-       color: #ff0;
+         color: #ff0;
      }
      .btn-source {
-       padding: 10px 24px;
-       margin-bottom: 30px;
+         padding: 10px 24px;
+         margin-bottom: 30px;
      }
      .title {
-       color: #fff;
-       margin-bottom: 30px;
+         color: #fff;
+         margin-bottom: 30px;
      }
      #name {
-       color: #fff;
-       font-size: 150px;
-       line-height: 1;
-       margin-bottom: 30px;
+         color: #fff;
+         font-size: 150px;
+         line-height: 1;
+         margin-bottom: 30px;
+     }
+     #nav-small {
+         display: none;
+     }
+     #home {
+         margin: 80px 0;
      }
      @media only screen and (max-width: 768px) {
-       #name {font-size: 3rem;line-height: 1;}
+         #name {font-size: 3rem;line-height: 1;}
+     }
+     @media only screen and (max-width: 767px) {
+         #nav { display: none; }
+         #nav-small { display:block; }
+         #home { margin: 40px 0; }
      }
     </style>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -49,7 +60,7 @@
   <body>
     <div class="container">
       <div class="masthead" style="padding-top: 30px;">
-        <nav>
+        <nav id="nav">
           <ul class="nav nav-justified">
             <li><a href="#home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -58,9 +69,15 @@
             <li><a href="/index_zh.html">中文</a></li>
           </ul>
         </nav>
+        <nav id="nav-small" >
+            <ul class="nav nav-justified">
+                <li style="float: left; padding-left: 20px;"><a href="#home">Home</a></li>
+                <li style="float: right; padding-right: 20px;"><a href="/index_zh.html">中文</a></li>
+            </ul>
+        </nav>
       </div>
       <!-- Jumbotron -->
-      <div id="home" class="text-center" style="margin: 80px 0;">
+      <div id="home" class="text-center">
           <h1 id="name"><b style="color:#ff0;text-shadow: 6px 6px #a0a;">Cypher</b><b style="color:#aa00aa;text-shadow: 6px 6px #990;">Link</b><b style="text-shadow:6px 6px #000;">!</b></h1>
           <p id="desc" class="jumbotron" style="font-size: 24px;line-height: 1.25;margin-bottom: 30px;">
               We have framed a high-performance blockchain architecture with a recursive hierarchy in the past two years.
